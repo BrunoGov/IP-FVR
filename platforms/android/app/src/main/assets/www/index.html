@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+  <meta name="format-detection" content="telephone=no">
+  <meta charset="utf-8">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <title>IP-FVR</title>
+</head>
+<body>
+  <p id="msg"></p>
+  <div class="menu white" id="menu">
+    <div class="list indigo-900 cover blend-soft-light no-border">
+      <div class="item">
+        <img src="img/ip_fvr_branco.png" width="200" class="small" />
+      </div>
+    </div>
+    <div class="list">
+      <!-- MENU HOME -->
+
+      <!-- MENU LOGIN -->
+      <div class="item" onclick="abre_login()">
+        <h1 style="font-family: 'Varela Round', sans-serif;"><i class="ion-log-in" style="color: #1A237E;"></i> Login</h1>
+      </div>
+      <!-- FIM MENU LOGIN -->
+    </div>
+  </div>
+
+  <div class="header indigo-900">
+    <!-- <button class="left icon ion-navicon" name="button" onclick="openMenu('menu')"></button> -->
+    <img style="width: 40%; padding: 10px; margin-left: 30%;" src="img/ip_fvr_branco.png" class="small" />
+<!--     <div class="right">
+      <button class="icon ion-bag" onclick="carrega_all_produtos();"></button>
+    </div> -->
+  </div>
+
+  <div class="footer indigo-900 shadow tab animated fadeInUp" style="height: 49px;">
+  <button class="text-white icon ion-home active" onclick="openTab('tabHome')" style="font-family: 'Varela Round', sans-serif;">Inicio</button>
+  <button class="text-white icon ion-document-text" onclick="openTab('tabRelatorios')" style="font-family: 'Varela Round', sans-serif;">Relatório</button>
+  <button class="text-white icon ion-ios-person" onclick="openTab('tabLogin'); auto_login()" style="font-family: 'Varela Round', sans-serif;">Login</button>
+  <button class="text-white icon ion-bag" onclick="openTab('tabBolsa'); carrega_all_produtos();" style="font-family: 'Varela Round', sans-serif;">Sacola</button>
+</div>
+
+<div class="content has-header padding">
+
+  <div class="tab-content active" id="tabHome">
+    <div class="row">
+      <div class="col cover radius no-padding" style="margin-top: 10px;">
+        <div class="padding shadow radius mark" style="height: 90px; background-image: url('https://i1.wp.com/tamarthi.com.br/wp-content/uploads/2018/08/supermercados-img-1.png?fit=898%2C324&ssl=1'); background-size: cover;" onclick="carrega_produtos('SUPERMERCADO');">
+          <center>
+            <i class="ion-android-cart" style="font-size: 20px; float: left; color: #fff;"></i>
+            <br>
+            <p class="text-strong" style="margin-top: 35px; float: left; margin-left: -20px; color: #fff;">Supermercado</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-50 cover radius no-padding" style="margin-top: 10px; margin-right: 5px;">
+        <div class="padding shadow radius mark" style="height: 90px; background-image: url('http://acouguedonilo.com.br/wp-content/uploads/2017/04/ACOUGUEDONILO-20-04-17-img-476x360.jpg'); background-size: cover;" onclick="carrega_produtos('ACOUGUE');">
+          <center>
+            <i class="ion-android-cart" style=" font-size: 20px; float: left; color: #fff;"></i>
+            <br>
+            <p class="text-strong" style="margin-top: 35px; float: left; margin-left: -20px; color: #fff;">Açougue</p>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-50 cover radius no-padding" style="margin-top: 10px; margin-left: 5px;">
+        <div class="padding shadow radius mark" style="height: 90px; background-image: url('http://www.diariocostaesmeralda.com/painel/uploads/NOTICIAS/3726/procon-registra-queda-nos-precos-dos-combustiveis-em-itajai.jpeg'); background-size: cover;" onclick="carrega_produtos('COMBUSTIVEL');">
+          <center>
+            <i class="ion-soup-can" style=" font-size: 20px; float: left; color: #fff;"></i>
+            <br>
+            <p class="text-strong" style="margin-top: 35px; float: left; margin-left: -20px; color: #fff;">Combustíveis</p>
+          </center>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col cover radius no-padding" style="margin-top: 10px;">
+        <div class="padding shadow radius mark" style="height: 90px; background-image: url('https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBWnzcl.img?h=0&w=720&m=6&q=60&u=t&o=f&l=f&x=602&y=486'); background-size: cover;" onclick="carrega_produtos('PADARIA');">
+          <center>
+            <i class="ion-coffee" style=" font-size: 20px; float: left; color: #fff;"></i>
+            <br>
+            <p class="text-strong" style="margin-top: 35px; float: left; margin-left: -20px; color: #fff;">Padaria</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-50 cover radius no-padding" style="margin-top: 10px; margin-right: 5px;">
+        <div class="padding shadow radius mark" style="height: 90px; background-image: url('https://img.itdg.com.br/tdg/images/blog/uploads/2017/07/shutterstock_598749548-1-300x159.jpg'); background-size: cover;" onclick="carrega_produtos('VAREJAO');">
+          <center>
+            <i class="ion-ios-nutrition" style=" font-size: 20px; float: left; color: #fff;"></i>
+            <br>
+            <p class="text-strong" style="margin-top: 35px; float: left; margin-left: -20px; color: #fff;">Feira Livre</p>
+          </center>
+        </div>
+      </div>
+      <div class="col-50 cover radius no-padding" style="margin-top: 10px; margin-left: 5px;">
+        <div class="padding shadow radius mark" style="height: 90px; background-image: url('https://s3.amazonaws.com/jacotei-static-img/guia/wp-content/uploads/2019/01/11094920/material-escolar-volta-as-aulas.jpg'); background-size: cover;" onclick="carrega_produtos('PAPELARIA');">
+          <center>
+            <i class="ion-edit" style=" font-size: 20px; float: left; color: #fff;"></i>
+            <br>
+            <p class="text-strong" style="margin-top: 35px; float: left; margin-left: -20px; color: #fff;">Material Escolar</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col cover radius no-padding" style="margin-top: 10px;">
+        <div class="padding shadow radius mark" style="height: 90px; background-image: url('https://img.r7.com/images/gas-glp-botijao-03122018153857120?dimensions=460x305'); background-size: cover;" onclick="carrega_produtos('GAS');">
+          <center>
+            <i class="ion-android-cart" style=" font-size: 20px; float: left; color: #fff;"></i>
+            <br>
+            <p class="text-strong" style="margin-top: 35px; float: left; margin-left: -20px; color: #fff;">Gás de Cozinha</p>
+          </center>
+        </div>
+      </div>
+    </div>
+    <a href="http://portal.unisepe.com.br/univr/ciencias-contabeis/">
+      <center>
+        <img style="margin-top: 20px;" src="img/logo_ct.png">
+      </center>
+      <p style="text-align: center; font-weight: bold; font-size: 18px;">Ciências Contábeis</p>
+    </a>
+    <p style="color: #000; text-align: center; margin-bottom: 70px;">Desenvolvido por<a href="https://linkedin.com/in/bruno-m-085827109/" style="color: blue; font-weight: bold;"> Bruno Morais</a></p>
+  </div>
+
+
+  <div class="tab-content" id="tabRelatorios">
+    <div class="padding shadow radius mark" style="    width: 100%; height: 90px; margin-top: 10px; background-image: url(https://www.colegiosantoantonio.com.br/wp-content/uploads/bfi_thumb/Indicadores-econ%C3%B4micos-2zuwemuef174fvdsdubhmo.jpg); background-size: cover; color: #000;" onclick="openPage('categoria_mes_relatorio')">
+      <center>
+        <i class="ion-stats-bars" style="float: left; font-size: 20px;"></i>
+        <br>
+        <p class="text-strong" style="margin: 35px; float: left; margin-left: -20px;">Relatório dos Analistas</p>
+      </center>
+    </div>
+  </div>
+
+  <div class="tab-content has-header login" id="tabLogin">
+    <img src="http://www.unisepe.com.br/hotsite/assets/img/logo_branco.png" id="img_login" style="position: absolute; left: 19%; width: 65%;">
+    <div id="content_login">
+      <p class="welcome" id="welcome">Bem Vindo!</p>
+      <p class="text_login" id="text_login">Faça cotação de vários produtos, você podera fazer cotações, aprovar ou reprovar alunos, lista de cotações, novos produtos e estabelecimentos e ver relatórios referente as cotações, tudo direto no seu celular.</p>
+      <button class="btn_login" id="btn_login" onclick="btn_login()">Fazer login</button>
+      <button class="btn_primeiro_acesso" id="btn_primeiro_acesso" onclick="btn_cad_aluno()">Primeiro acesso</button>
+    </div>
+
+    <div class="col form_login" id="form_login" style="margin-top: 96px;padding: 10px;">
+      <div class="list radius white" style="height: 206px; box-shadow: -3px 0px 14px rgba(0, 0, 0, 0.54);">
+
+        <div class="item no-border">
+          <label class="text-black">RA</label>
+          <input type="number" class="input_login" style="padding: 6px;" id="RA" placeholder="Digite seu RA" />
+        </div>
+        <div class="item no-border">
+          <label class="text-black">Senha</label>
+          <input type="password" class="input_login" style="padding: 6px;" id="senha" placeholder="Digite seu CPF" />
+        </div>
+        <div class="item no-border" style="margin-top: 86px;">
+          <input type="checkbox" class="left switch blue" value="1" id="chk_autoLogin"/>
+          <label for="chk_autoLogin" class="left" style="color: #fff;">Lembrar Dados</label>
+        </div>
+      </div>
+      <center>
+        <button class="radius full center" style="background-color: blue; color: #fff; width: 200px; margin-top: -32px; border-radius: 30px; box-shadow: -3px 0px 14px rgba(0, 0, 0, 0.54);" onclick="login()" id="btn_login">
+          Fazer Login
+        </button>
+        <p class="icon ion-android-arrow-back" id="btn_back" onclick="btn_back_formLogin()" style="color: #fff;
+        font-size: 115%;
+        margin-left: -3%;
+        margin-top: 16vh;">Voltar</p>
+      </center>
+    </div>
+
+    <div class="col cad_aluno" id="cad_aluno" style="margin-top: 96px;padding: 10px;">
+      <div class="list radius white" style="height: 282px; box-shadow: -3px 0px 14px rgba(0, 0, 0, 0.54);">
+
+        <div class="item no-border">
+          <label class="text-black">RA</label>
+          <input type="number" class="ra_cadastro" style="padding: 6px;" id="ra_cadastro" placeholder="Digite seu RA"/>
+        </div>
+        <div class="item no-border">
+          <label class="text-black">Nome</label>
+          <input type="text" class="nome_cadastro" style="padding: 6px;" id="nome_cadastro" placeholder="Digite seu nome"/>
+        </div>
+        <div class="item no-border">
+          <label class="text-black">CPF</label>
+          <input type="number" class="cpf_cadastro" style="padding: 6px;" id="cpf_cadastro" placeholder="Digite seu CPF"/>
+        </div>
+      </div>
+      <center>
+        <button class="radius full center" style="background-color: blue; color: #fff; width: 200px; margin-top: -32px; border-radius: 30px; box-shadow: -3px 0px 14px rgba(0, 0, 0, 0.54);" onclick="cadastrar_aluno()">
+          Solicitar Cadastro
+        </button>
+        <p class="icon ion-android-arrow-back" id="btn_back" onclick="btn_back_cad()" style="color: #fff;
+        font-size: 115%;
+        margin-left: -3%;
+        margin-top: 3vh;">Voltar</p>
+      </center>
+    </div>
+  </div>
+
+  <div class="tab-content" style="    margin-top: -10px;" id="tabBolsa">
+    <div class="list" style="    width: 106%;
+    margin-left: -3%;">
+    <div class="item" data="DATA_ALL_PRODUTOS">
+      <h2 style="font-weight: bold; width: 67%;">${produto}</h2>
+      <p class="text-small text-bold padding text-black">Média do preço: <span class="text-small green radius padding">R$ ${media_item}</span></p>
+      <div class="right">
+        <i class="ion-android-add-circle" onclick="add_cart('${produto}',${media_item}, $$index); count_up($$index);" style="font-size: 30px; color: green;"></i>
+        <p style="padding-left: 4px; font-size: 18px;" id="item$$index">0</p>
+        <i class="ion-minus-circled" onclick="remove_cart('${produto}'); count_down($$index);" style="font-size: 29px; color: red;"></i>
+      </div>
+    </div>
+  </div>
+  <div class="shadow tab" style="margin-bottom: 39px;">
+    <button class="icon active" style="margin-top: 0px;
+    background-color: green;
+    color: #fff;
+    width: 113%;
+    margin-left: -3%;
+    padding: 5px;
+    margin-right: -3%;" onclick="btn_finalizar();">Finalizar</button>
+  </div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="mobileui/mobileui.js"></script>
+<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/lista_alimentos.js"></script>
+<script type="text/javascript" src="js/cadastro_produtos.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/carrinho.js"></script>
+<script type="text/javascript" src="js/cotacao.js"></script>
+<script type="text/javascript" src="js/cadastro_aluno.js"></script>
+<script type="text/javascript" src="js/consultar_alunos.js"></script>
+<script type="text/javascript" src="js/lista_cotacao.js"></script>
+<script type="text/javascript" src="js/itens_cotados.js"></script>
+<script type="text/javascript" src="js/filtro.js"></script>
+<script type="text/javascript" src="js/cotacoes_realizadas.js"></script>
+<script type="text/javascript" src="js/carrega_dados.js"></script>
+<script type="text/javascript" src="js/relatorio_analistas.js"></script>
+<script type="text/javascript" src="js/minha_cotacao.js"></script>
+<script type="text/javascript" src="js/notification.js"></script>
+<script type="text/javascript" src="js/perfil.js"></script>
+</body>
+</html>

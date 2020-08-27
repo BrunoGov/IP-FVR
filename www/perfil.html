@@ -1,0 +1,88 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<h1 class="title">Perfil</h1>
+		<div class="right">
+			<span data="TAM_CARRINHO" class="icon-badge text-small red radius padding" style="position: absolute; margin-left: 18px; margin-top: -8px; border-radius: 8px; z-index: 999; font-size: 12px;">${tamanho_carrinho}</span>
+			<button class="icon ion-android-cart" onclick="openPage('carrinho')"></button>
+		</div>
+	</div>
+
+	<div class="content has-header">
+		<center>
+			<div class="img_perfil indigo-900" style="height: 190px;" data="DADOS_PERFIL">
+				<img class="avatar circle" src="${img_perfil}" style="width: 25%;">
+				<p style="    font-size: 147%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				width: 62%;">${nome}</p>
+				<p style="font-size: 130%;
+				width: 100px;
+				padding: 6px;
+				border-radius: 10px;
+				background-color: crimson;">${nivel}</p>
+				<!-- <p style="border: 1px solid #fff;width: 30%;border-radius: 10px;">Atualizar foto</p> -->
+			</div>
+		</center>
+		<div class="row align-center" data="DADOS_PERFIL">
+			<div class="col padding text-black">
+				<h1 class="text-huge text-strong">${cotacao_realizada}</h1>
+				<p>Cotações Relalizadas</p>
+			</div>
+			<div class="col padding text-black">
+				<h1 class="text-huge text-strong">${cotacao_aprovada}</h1>
+				<p>Cotações Autorizadas</p>
+			</div>
+			<div class="col padding text-black">
+				<h1 class="text-huge text-strong">${cotacao_reprovada}</h1>
+				<p>Cotações Reprovadas</p>
+			</div>
+		</div>
+		<div class="list">
+			<div class="item">
+				<div class="left">
+					<div class="icon-circle text-blue border-blue">
+						<i class="icon ion-ios-gear" style="font-size: 27px;margin-top: 2px;"></i>
+					</div>
+				</div>
+				<h2 style="margin-top: 10px;">Editar dados</h2>
+				<div class="right">
+					<i class="icon ion-ios-arrow-right"></i>
+				</div>
+			</div>
+			<div class="item" onclick="openPage('ajuda')">
+				<div class="left">
+					<div class="icon-circle text-blue border-blue">
+						<i class="icon ion-help" style="font-size: 27px;margin-top: 2px;"></i>
+					</div>
+				</div>
+				<h2 style="margin-top: 10px;">Ajuda</h2>
+				<div class="right">
+					<i class="icon ion-ios-arrow-right"></i>
+				</div>
+			</div>
+			<div class="item" onclick="openPage('sobre')">
+				<div class="left">
+					<div class="icon-circle text-blue border-blue">
+						<i class="icon ion-information" style="font-size: 27px;margin-top: 2px;"></i>
+					</div>
+				</div>
+				<h2 style="margin-top: 10px;">Sobre</h2>
+				<div class="right">
+					<i class="icon ion-ios-arrow-right"></i>
+				</div>
+			</div>
+			<div class="item" onclick="sair();">
+				<div class="left">
+					<div class="icon-circle text-red border-red">
+						<i class="icon ion-log-out" style="font-size: 27px;margin-top: 2px;"></i>
+					</div>
+				</div>
+				<h2 style="margin-top: 10px;">Sair</h2>
+			</div>
+		</div>
+	</div>
+</div>

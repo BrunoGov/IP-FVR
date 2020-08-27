@@ -1,0 +1,92 @@
+*{
+	font-family: 'Varela Round', sans-serif;
+}
+
+.input_login{
+	border-bottom: 1px solid #ddd;
+	transition: .5s;
+}
+
+.input_login:focus{
+	border-bottom: 1px solid blue;
+	transition: .5s;
+}
+
+.ra_cadastro{
+	border-bottom: 1px solid #ddd;
+	transition: .5s;
+}
+
+.ra_cadastro:focus{
+	border-bottom: 1px solid blue;
+	transition: .5s;
+}
+
+.nome_cadastro{
+	border-bottom: 1px solid #ddd;
+	transition: .5s;
+}
+
+.nome_cadastro:focus{
+	border-bottom: 1px solid blue;
+	transition: .5s;
+}
+
+.cpf_cadastro{
+	border-bottom: 1px solid #ddd;
+	transition: .5s;
+}
+
+.cpf_cadastro:focus{
+	border-bottom: 1px solid blue;
+	transition: .5s;
+}
+
+.login{
+	background-color: #1a237e!important;
+	margin-top: -10px;
+	width: 107%;
+	height: 94vh;
+	margin-left: -10px;
+}
+
+.welcome{
+	position: absolute;
+	padding: 27px;
+	font-size: 230%;
+	margin-top: 40%;
+	color: #fff;
+}
+
+.text_login{
+	position: absolute;
+	margin-top: 61%;
+	padding: 7%;
+	color: #fff;
+	text-align: justify;
+}
+
+.btn_login{
+	background-color: #fff;
+	width: 90%;
+	margin-left: 18px;
+	border-radius: 10px;
+	margin-top: 59vh;
+}
+
+.btn_primeiro_acesso{
+	background-color: #2196f3;
+	width: 90%;
+	margin-left: 18px;
+	border-radius: 10px;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.form_login{
+	display: none;
+}
+
+.cad_aluno{
+	display: none;
+}
